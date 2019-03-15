@@ -1,0 +1,626 @@
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *(Hola mundo)
+ * @author Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        JOptionPane.showMessageDialog(null, "Hola mundo");
+System.exit(0);
+    }
+    
+}
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *(contraseña)
+ * @author Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String usuario="admin",respuesta;
+        respuesta=JOptionPane.showInputDialog(null,"Ingrese su usuario.");
+        if (respuesta.equals(usuario)){
+              JOptionPane.showMessageDialog(null,"Bienvenido");
+      } else{ 
+         JOptionPane.showMessageDialog(null, "Contraseña incorrecta");   
+            
+        }
+System.exit(0);
+    }
+    
+}
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *(Determinar cuantas cifras tiene el numero ingresado por teclado)
+ * @author Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String n1;
+        int num1;
+        n1=JOptionPane.showInputDialog(null,"Ingrese un numero");
+        num1=Integer.parseInt(n1);
+        if (num1>0&&num1<10){
+            JOptionPane.showMessageDialog(null,"El numero que usted ha ingresado es de una cifra");
+        } else if (num1>=10&&num1<100){
+           JOptionPane.showMessageDialog(null,"El numero que usted ha ingresado es de dos cifras");
+        }
+System.exit(0);
+    }
+    
+}
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *(Determinar si el alumno aprueba la materia, mediante el ingreso de tres notas)
+ * @author Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String n1,n2,n3;
+        double num1,num2,num3,prom;
+        n1=JOptionPane.showInputDialog("Ingrese la nota N1.");
+        n2=JOptionPane.showInputDialog("Ingrese la nota N2.");
+        n3=JOptionPane.showInputDialog("Ingrese la nota N3.");
+        num1=Double.parseDouble(n1);
+        num2=Double.parseDouble(n2);
+        num3=Double.parseDouble(n3);
+        prom=(num1+num2+num3)/3;
+        if (prom>=7){
+            JOptionPane.showMessageDialog(null, "Nota: "+prom+"\nResultado: APROBADO");
+        } else {
+            JOptionPane.showMessageDialog(null, "Nota: "+prom+"\nResultado: REPROBADO");
+        }
+  System.exit(0);
+    }
+    
+}
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Determinar si el alumno aprueba la materia, mediante el ingreso de seis notas(laboratorios y parciales)
+ * @author Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String n1,n2,n3,n4,n5,n6;
+        double num1,num2,num3,num4,num5,num6,prom1,prom2,prom3,promF;
+        n1=JOptionPane.showInputDialog("LABORATORIO 1.");
+        n2=JOptionPane.showInputDialog("PARCIAL 1.");
+        n3=JOptionPane.showInputDialog("LABORATORIO 2.");
+        n4=JOptionPane.showInputDialog("PARCIAL 2.");
+        n5=JOptionPane.showInputDialog("LABORATORIO 3");
+        n6=JOptionPane.showInputDialog("PARCIAL 3");
+        num1=Double.parseDouble(n1);
+        num2=Double.parseDouble(n2);
+        num3=Double.parseDouble(n3);
+        num4=Double.parseDouble(n4);
+        num5=Double.parseDouble(n5);
+        num6=Double.parseDouble(n6);
+        prom1=(num1*0.4)+(num2*0.6);
+        prom2=(num3*0.4)+(num4*0.6);
+        prom3=(num5*0.4)+(num6*0.6);
+        promF=(prom1+prom2+prom3)/3;
+        if (promF>=7){
+             JOptionPane.showMessageDialog(null, "Nota: "+promF+"\nResultado: APROBADO");
+        } else {
+            JOptionPane.showMessageDialog(null, "Nota: "+promF+"\nResultado: REPROBADO");
+        }
+       System.exit(0);
+    }
+    
+}
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Determinar si aplica el descuento para el articulo comprado )
+ * @author Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String pre;
+        double precio,descuento,total;
+        pre=JOptionPane.showInputDialog("Ingrese el precio de los zapatos");
+        precio=Double.parseDouble(pre);
+        if (precio>=150){
+        descuento=precio*0.20;
+        total=precio-descuento;
+        JOptionPane.showMessageDialog(null, "El articulo tiene un descuento del 20% \nDescuento: $"+descuento+""
+                + "\nTotal a pagar: $"+total);
+    } else{
+        JOptionPane.showMessageDialog(null,"No aplica el descuento para este articulo \n"
+                + "Total a pagar: $"+precio);
+    }
+       System.exit(0);
+    }
+    
+}
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *determinar el salario dependiendo de las horas trabajadas.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String hora;
+        int horas;
+        double salario,extra,total;
+        hora=JOptionPane.showInputDialog("Ingrese la cantidad de horas trabajadas");
+        horas=Integer.parseInt(hora);
+        if (horas<=40){
+            salario=horas*10;
+            JOptionPane.showMessageDialog(null,"El salario es de: $"+salario);
+        }else{
+            salario=40*10;
+            extra=(horas-40)*15;
+            total=salario+extra;
+            JOptionPane.showMessageDialog(null,"El salario es de: $"+total);
+        }
+        System.exit(0);
+    }
+    
+}
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Ingresar 5 notas por teclado y determinar la mayor.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String num1,num2,num3,num4,num5;
+        double n1,n2,n3,n4,n5;
+        num1=JOptionPane.showInputDialog("Ingrese la nota No.1");
+        num2=JOptionPane.showInputDialog("Ingrese la nota No.2");
+        num3=JOptionPane.showInputDialog("Ingrese la nota No.3");
+        num4=JOptionPane.showInputDialog("Ingrese la nota No.4");
+        num5=JOptionPane.showInputDialog("Ingrese la nota No.5");
+        n1=Double.parseDouble(num1);
+        n2=Double.parseDouble(num2);
+        n3=Double.parseDouble(num3);
+        n4=Double.parseDouble(num4);
+        n5=Double.parseDouble(num5);
+        if (n1>n2&&n1>n3&&n1>n4&&n1>n5){
+            JOptionPane.showMessageDialog(null,"De las cinco notas ingresadas la mayor es: "+n1);
+        }else if (n2>n1&&n2>n3&&n2>n4&&n2>n5){
+            JOptionPane.showMessageDialog(null,"De las cinco notas ingresadas la mayor es: "+n2);
+        }else if (n3>n1&&n3>n2&&n3>n4&&n3>n5){
+            JOptionPane.showMessageDialog(null,"De las cinco notas ingresadas la mayor es: "+n3);
+        }else if (n4>n1&&n4>n2&&n4>n3&&n4>n5){
+            JOptionPane.showMessageDialog(null,"De las cinco notas ingresadas la mayor es: "+n4);
+        }else if (n5>n1&&n5>n2&&n5>n3&&n5>n4){
+            JOptionPane.showMessageDialog(null,"De las cinco notas ingresadas la mayor es: "+n5);
+        }
+        System.exit(0);
+    }
+    
+}
+
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Determinar los gastos del mes de un padre de familia.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String respuesta;
+        double agua=50,luz=20,hijos,colegiatura=55,total;
+        JOptionPane.showMessageDialog(null, "GASTOS DEL MES \nAgua potable $50 \n"
+                + "Luz electrica $20 \nColegiatura $55 (por hijo) \n**Descuento del 50% si el padre de familia tiene cinco hijos esstudiando**");
+        respuesta=JOptionPane.showInputDialog("INgrese la cantidad de hijos que asisten al colegio");
+        hijos=Double.parseDouble(respuesta);
+        if (hijos>=5){
+            total=(colegiatura*0.5)*hijos;
+            JOptionPane.showMessageDialog(null,"Si aplica el descuento en colegiaturas (50%)\n"
+                    + "total de colegiaturas: $"+total+"\nTotal gastos del mes: $"+(total+agua+luz));
+        } else{
+            total=colegiatura*hijos;
+            JOptionPane.showMessageDialog(null,"NO aplica el descuento de colegiaturas \n"
+                    + "Total de colegiaturas: $"+total+"\nTotal gastos del mes: $"+(total+agua+luz));
+        }
+        System.exit(0);
+    }
+    
+}
+
+
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Repeticion de valores con while.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       String num1,num2;
+        int n1,n2;
+        num1=JOptionPane.showInputDialog("Ingrese el valor No.1");
+        num2=JOptionPane.showInputDialog("Ingrese el valor No.2");
+        n1=Integer.parseInt(num1);
+        n2=Integer.parseInt(num2);
+        JOptionPane.showMessageDialog(null,"La suma de los valores ingresados es: "+(n1+n2)+"\n"
+                + "La resta de los valores ingresados es: "+(n1-n2)+"\n"
+                        + "La multiplicacion de los valores es: "+(n1*n2)+"\n"
+                                + "La multiplicacion de los valores es: "+(n1/n2));
+        
+        System.exit(0);
+    }
+    
+}
+
+
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Repeticion de valores con while.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int var=1;
+        while (var<=100 ){
+            JOptionPane.showMessageDialog(null,"Iterando: "+var+" veces");
+            var++;
+        }
+        System.exit(0);
+    }
+    
+}
+
+
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *calificaciones (resultados).
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       String num1;
+       double n1;
+       num1=JOptionPane.showInputDialog("Ingrese una nota");
+       n1=Double.parseDouble(num1);
+       if(n1>=9){
+           JOptionPane.showMessageDialog(null, "EXCELENTE!");
+       } else if(n1>=8&&n1<9){
+           JOptionPane.showMessageDialog(null, "MUY BIEN");
+       } else if(n1>=7&&n1<8){
+           JOptionPane.showMessageDialog(null, "REGULAR");
+       } else if (n1<7){
+           JOptionPane.showMessageDialog(null, "NECESITA MEJORAR");
+       }
+       System.exit(0);
+    }
+    
+}
+
+
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *determinar el resultado del promedio del alumno
+ * @author Nicolas Lopez
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String num1;
+        double n1;
+        num1=JOptionPane.showInputDialog("Ingrese el promedio del alumno");
+        n1=Double.parseDouble(num1);
+        if(n1>=7){
+            JOptionPane.showMessageDialog(null, "Nota: "+n1+"\n"
+                    + "Resultado: APROBADO");
+        }else if (n1<7){
+          JOptionPane.showMessageDialog(null, "Nota: "+n1+"\n"
+                    + "Resultado: REPROBADO");
+       
+      }
+     System.exit(0);
+
+    }
+ }
+
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Establecer un valor inicial y uno final, para mostrar los digitos de dos en dos.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       String num1,num2;
+       int x,n1,n2;
+       num1=JOptionPane.showInputDialog("Ingrese el valor inicial");
+       num2=JOptionPane.showInputDialog("Ingrese el valor final");
+       n1=Integer.parseInt(num1);
+       n2=Integer.parseInt(num2);
+       for (x=n1;x<=n2;x=x+2){
+            
+      
+              JOptionPane.showMessageDialog(null,x);
+            
+        
+        }
+       System.exit(0);
+    }
+    
+}
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *Practica javax.swing.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       String nombre;
+        nombre=JOptionPane.showInputDialog(null, "Ingrese su nombre");
+        JOptionPane.showMessageDialog(null, "BIENVENIDO: " + nombre);
+        
+        System.exit(0);
+       
+    }
+    
+}
+
+
+
+
+package javaapplication22;
+
+import javax.swing.JOptionPane;
+
+/**
+ *ingresar dos valores y mostrar sus sumatoria.
+ * @Nicolás López
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       String num1,num2;
+       int n1,n2,suma;
+       JOptionPane.showMessageDialog(null,"BIENVENIDO");
+       num1=JOptionPane.showInputDialog("Ingrese el primer numero");
+       num2=JOptionPane.showInputDialog("Ingrese el segundo numero");
+       n1=Integer.parseInt(num1);
+       n2=Integer.parseInt(num2);
+       suma=n1=n2;
+       JOptionPane.showMessageDialog(null,"la suma de los valores es: "+suma);
+       System.exit(0);
+    }
+    
+}
+
+
+
+
+
+package javaapplication25;
+
+import javax.swing.JOptionPane;
+/**
+ *Tabla de multiplicar (While)
+ * @Nicolas Lopez
+ */
+public class JavaApplication25 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        int x=1,i,y=1;
+        while (y<=10){
+            JOptionPane.showMessageDialog(null,"TABLA #"+y);
+            i=1;  //"i" se reinicia en 1 para que el ciclo empieze de nuevo
+            while (i<=10){
+            JOptionPane.showMessageDialog(null,x+" x "+i+" = "+x*i);
+            i++;
+        }
+            x++;
+            y++;
+        }
+        System.exit(0);
+    }
+    
+}
+
+
+
+
+
+
+package tabla;
+
+import javax.swing.JOptionPane;
+/**
+ *Tablas de multiplicar (ciclo For)
+ * @author Nicolas Lopez
+ */
+public class Tabla {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int x,y,total;
+        for (x=1;x<=10;x++){
+            JOptionPane.showMessageDialog(null,"TABLA No."+x);
+            for (y=1;y<=10;y++){
+                total=x*y;
+                JOptionPane.showMessageDialog(null,x+"X"+y+" = "+total);
+            }
+        }
+        System.exit(0);
+        
+    }
+}
